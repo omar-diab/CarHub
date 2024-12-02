@@ -16,6 +16,7 @@ const Header = () => {
                 />
             </Link>
             <CustomButton
+                isDisabled
                 title= 'Sign In'
                 btnType= 'button'
                 containerStyles="text-primary-blue rounded-full bg-white min-w-[130px] hover:bg-primary-blue hover:text-white transition hover:ease-in"

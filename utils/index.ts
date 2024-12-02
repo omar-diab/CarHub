@@ -3,8 +3,8 @@ import { CarProps, FilterProps } from "@/types";
 export async function fetchCars(filters: FilterProps) {
     const {manuFacturer, year, model, limit, fuel} = filters;
     const headers = {
-		'x-rapidapi-key': '52cd54b136msh9de825e64c5250ap19d843jsn15c5fd6936ee',
-		'x-rapidapi-host': 'cars-by-api-ninjas.p.rapidapi.com'
+        'x-rapidapi-key': 'fbff61640amsh3a82a794ba39b76p19ec14jsnc12adb5a35bf',
+        'x-rapidapi-host': 'cars-by-api-ninjas.p.rapidapi.com'  
     };
     const response = await fetch(
         `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?make=${manuFacturer}&year=${year}&model=${model}&limit=${limit}&fuel_type=${fuel}`, {
@@ -15,7 +15,7 @@ export async function fetchCars(filters: FilterProps) {
 }
 
 export const generateCarImageUrl = (car : CarProps, angle?: string) => {
-    const url = new URL('https://cdn.imagin.studio/getimage');
+    const url = new URL("https://cdn.imagin.studio/getimage");
     const {make, year, model} = car;
     url.searchParams.append('customer', 'hrjavascript-mastery');
     url.searchParams.append('make', make);

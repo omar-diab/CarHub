@@ -6,7 +6,7 @@ import { CustomButtonProps } from "@/types";
 const CustomButton = ({ title, containerStyles, handleClick, btnType, textStyles, rightIcon, isDisabled}: CustomButtonProps) => {
   return (
     <button
-      disabled={false}
+      disabled={isDisabled}
       type={btnType}
       className={`${containerStyles} flex flex-row relative justify-center items-center py-3 px-6 outline-none`}
       onClick={handleClick}
